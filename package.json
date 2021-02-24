@@ -1,0 +1,15 @@
+{
+  "name": "foundations",
+  "version": "1.0.0",
+  "description": "Practice test suites for mod 1 assessments",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Taryn Martin",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0"
+  }
+}
