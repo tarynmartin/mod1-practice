@@ -50,14 +50,14 @@ describe('Bakery', function () {
     assert.equal(order, "Here is your bagel. Have a great day!")
   })
   it.skip('should let customer know if an item is unavailable', function () {
-    var bakery = new Bakery({name: "Bean's", owner: "Benedict Cumberbatch", specialities: ["bagel", "muffin"], drinks: ['coffee', 'tea', 'hot chocolate']})
+    var bakery = new Bakery({name: "Tom's", owner: "Tom Martin", specialities: ["bread", "cake"], drinks: ['coffee', 'tea']})
 
     var order = bakery.takeOrder('cupcake')
 
     assert.equal(order, "Sorry we do not have a cupcake. Is there something else you would like?")
   })
   it.skip('should add a new speciality', function () {
-    var bakery = new Bakery({name: "Bean's", owner: "Benedict Cumberbatch", specialities: ["bagel", "muffin"], drinks: ['coffee', 'tea', 'hot chocolate']})
+    var bakery = new Bakery({name: "Mary's", owner: "Chris Pratt", specialities: ["cake", "muffin"], drinks: ['steamers', 'hot chocolate']})
 
     bakery.addSpeciality("cupcake");
 
@@ -66,7 +66,7 @@ describe('Bakery', function () {
 
   // complete BakedGoods test on line 92 before continuing
   it.skip('should create an inventory from focus', function () {
-    var bakery = new Bakery({name: "Bean's", owner: "Benedict Cumberbatch", specialities: ["bagel", "muffin"], drinks: ['coffee', 'tea', 'hot chocolate']})
+    var bakery = new Bakery({name: "John's", owner: "John Brown", specialities: ["bagel", "sourdough bread"], drinks: ['tea', 'hot chocolate']})
 
     bakery.createInventory(2);
 
@@ -74,17 +74,17 @@ describe('Bakery', function () {
     assert.instanceOf(bakery.inventory[0], BakedGoods)
     assert.instanceOf(bakery.inventory[1], BakedGoods)
     assert.equal(bakery.inventory[0].name, "bagel")
-    assert.equal(bakery.inventory[1].name, "muffin")
+    assert.equal(bakery.inventory[1].name, "sourdough bread")
     assert.equal(bakery.inventory[0].amount, 24)
     assert.equal(bakery.inventory[1].amount, 24)
   })
   // below is very hard, feel free to skip
   it.skip('should be able to reduce inventory after customer order', function () {
-    var bakery = new Bakery({name: "Bean's", owner: "Benedict Cumberbatch", specialities: ["bagel", "muffin"], drinks: ['coffee', 'tea', 'hot chocolate']})
+    var bakery = new Bakery({name: "Liam's", owner: "Liam Neeson", specialities: ["coffee cake", "muffin"], drinks: ['coffee', 'hot chocolate']})
 
-    var order = bakery.takeOrder("bagel");
+    var order = bakery.takeOrder("coffee cake");
 
-    assert.equal(order, "Here is your bagel. Have a great day!");
+    assert.equal(order, "Here is your coffee cake. Have a great day!");
     assert.equal(bakery.inventory[0].amount, 23)
   })
 })
