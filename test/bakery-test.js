@@ -66,15 +66,15 @@ describe('Bakery', function () {
 
   // complete BakedGoods test on line 92 before continuing
   it.skip('should create an inventory from focus', function () {
-    var bakery = new Bakery({name: "Bean's", owner: "Benedict Cumberbatch", specialities: ["bagels", "muffins"], drinks: ['coffee', 'tea', 'hot chocolate']})
+    var bakery = new Bakery({name: "Bean's", owner: "Benedict Cumberbatch", specialities: ["bagel", "muffin"], drinks: ['coffee', 'tea', 'hot chocolate']})
 
     bakery.createInventory(2);
 
     assert.equal(bakery.inventory.length, 2)
     assert.instanceOf(bakery.inventory[0], BakedGoods)
     assert.instanceOf(bakery.inventory[1], BakedGoods)
-    assert.equal(bakery.inventory[0].name, "bagels")
-    assert.equal(bakery.inventory[1].name, "muffins")
+    assert.equal(bakery.inventory[0].name, "bagel")
+    assert.equal(bakery.inventory[1].name, "muffin")
     assert.equal(bakery.inventory[0].amount, 24)
     assert.equal(bakery.inventory[1].amount, 24)
   })
@@ -94,12 +94,12 @@ describe("Baked Good", function () {
     assert.isFunction(BakedGoods)
   })
   it.skip('should have a name', function () {
-    var brownies = new BakedGoods("brownies");
+    var brownies = new BakedGoods("brownie");
 
-    assert.equal(brownies.name, "brownies")
+    assert.equal(brownies.name, "brownie")
   })
   it.skip('should have an amount', function () {
-    var cupcakes = new BakedGoods("cupcakes")
+    var cupcakes = new BakedGoods("cupcake")
 
     assert.equal(cupcakes.amount, 24)
   })
@@ -111,7 +111,7 @@ describe("Baked Good", function () {
     assert.equal(sourdough.amount, 23)
   })
   it.skip('should to able to increase the amount of baked goods', function () {
-    var muffins = new BakedGoods("muffins");
+    var muffins = new BakedGoods("muffin");
 
     muffins.makeInventory(1);
 
